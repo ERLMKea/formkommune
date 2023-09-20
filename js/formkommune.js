@@ -1,6 +1,6 @@
 import {postObjectAsJson} from "./modulejson.js";
 
-console.log("jeg er i formkommune")
+console.log("jeg er i formkommune xx")
 
 document.addEventListener('DOMContentLoaded', createFormEventListener);
 let formKommune;
