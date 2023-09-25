@@ -31,10 +31,11 @@ function createTable(kommune) {
     img.setAttribute("height", 150)
     cell.appendChild(img)
 
-    //Add region dropdown
     cell = row.insertCell(cellCount++)
-    const dropdown = document.createElement('select');
-    cell.append(dropdown)
+    cell.innerHTML = kommune.region.kode
+
+    cell = row.insertCell(cellCount++)
+    cell.innerHTML = kommune.region.navn
 
     const pbDelete = document.createElement("input");
     pbDelete.type = "button";
@@ -48,15 +49,15 @@ function createTable(kommune) {
 }
 
 async function deleteKommune(kommune) {
-  try {
-     const url = urlKommune + "/" + kommune.kode
-     const resp = await restDelete(url)
-     const body = await resp.text();
-     alert(body)
-  } catch (error) {
-      alert(error.message);
-      console.log(error);
-  }
+    try {
+        const url = urlKommune + "/" + kommune.kode
+        const resp = await restDelete(url)
+        const body = await resp.text();
+        alert(body)
+    } catch (error) {
+        alert(error.message);
+        console.log(error);
+    }
 }
 
 function sortKommuner(kommuner) {
@@ -82,7 +83,7 @@ async function fetchKommuner() {
 }
 
 function actionGetKommuner() {
-  fetchKommuner()
+    fetchKommuner()
 }
 
 pbCreateKommuneTable.addEventListener('click', actionGetKommuner)
