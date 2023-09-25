@@ -27,8 +27,10 @@ tr:nth-child(odd) {
 .btn1 {
     background-color: #301811;
     color: #fff;
-    padding: 10px 20px;
+    padding: 5px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin: 10px;
 }
+
