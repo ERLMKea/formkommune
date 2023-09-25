@@ -13,9 +13,22 @@ td {
 }
 
 tr:nth-child(even) {
-    background-color: #00cf45;
+    background-color: #74615E;
 }
 
-h1 {
-    color: red;
+tr:nth-child(odd) {
+    background-color: #B27D56;
+}
+
+.cellhead {
+    background-color: #DBDCDC
+}
+
+.btn1 {
+    background-color: #301811;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }

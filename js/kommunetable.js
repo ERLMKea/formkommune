@@ -20,6 +20,20 @@ function createTable(kommune) {
 
     cell = row.insertCell(cellCount++)
     cell.innerHTML = kommune.href
+
+    cell = row.insertCell(cellCount++)
+    cell.innerHTML = kommune.region.kode
+
+    cell = row.insertCell(cellCount++)
+    cell.innerHTML = kommune.region.navn
+
+    const pbDelete = document.createElement("input");
+    pbDelete.type = "button";
+    pbDelete.setAttribute("value", "Slet kommune");
+    pbDelete.className = "btn1"
+    row.appendChild(pbDelete)
+
+
 }
 
 let kommuner = []
