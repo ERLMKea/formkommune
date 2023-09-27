@@ -28,6 +28,19 @@ function fetchAnyUrl(url) {
     return fetch(url).then(response => response.json())
 }
 
-export {postObjectAsJson, fetchAnyUrl, restDelete}
+const urlRegioner = "http://localhost:8080/regioner"
+
+let regionMap = new Map()
+
+async function fetchRegioner() {
+    if (regionMap.size < 2) {
+        console.log("fetch regioner fra backend")
+        const regioner = await fetchAnyUrl(urlRegioner)
+        regioner.forEach(region => regionMap.set(region.navn, region))
+    }
+    return regionMap
+}
+
+export {postObjectAsJson, fetchAnyUrl, restDelete, fetchRegioner}
 
 

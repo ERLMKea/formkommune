@@ -34,3 +34,19 @@ tr:nth-child(odd) {
     margin: 10px;
 }
 
+select {
+    background-color: #cb4c38;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+select option {
+    background-color: #e0a5a5;
+    color: #333;
+    font-size: 14px;
+}
+
+select:hover,
+select:focus {
+    border-color: #007bff;
+}
